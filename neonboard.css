@@ -9,7 +9,16 @@
   );
   --color-neutral-900: oklch(0.185 0 0);
 }
-
+@media (max-width: 768px) {
+  /* Tüm animasyonları, filtreleri ve geçişleri devre dışı bırak */
+  
+{
+  animation: none !important;
+  transition: none !important;
+  filter: none !important;  /* burası simseklerin hareketini durduracak */
+  text-shadow: none !important;
+  box-shadow: none !important;}
+}
 * {
   margin: 0;
   padding: 0;
