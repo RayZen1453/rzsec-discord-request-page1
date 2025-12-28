@@ -1,6 +1,25 @@
-/* Reset and base styles */
+/* =========================
+   RESET & BASE
+========================= */
 
-/* CSS Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: oklch(0.145 0 0);
+  color: oklch(0.985 0 0);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================
+   CSS VARIABLES
+========================= */
+
 :root {
   --electric-border-color: #dd8448;
   --electric-light-color: oklch(from var(--electric-border-color) l c h);
@@ -9,6 +28,10 @@
   );
   --color-neutral-900: oklch(0.185 0 0);
 }
+
+/* =========================
+   MEDIA FIXES
+========================= */
 
 @media (hover: none) and (pointer: coarse) {
   .electric-svg {
@@ -20,11 +43,9 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes scroll-left {
   0% {
@@ -35,14 +56,9 @@
   }
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+/* =========================
+   TOP MARQUEE
+========================= */
 
 .top-marquee {
   position: fixed;
@@ -54,19 +70,13 @@
   overflow: hidden;
   z-index: 9999;
 
-  transform: translateX(10px); /* ← BU SATIR */
+  transform: translateX(10px); /* → sadece 10px sağ */
 }
 
+/* =========================
+   MAIN LAYOUT
+========================= */
 
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: oklch(0.145 0 0);
-  color: oklch(0.985 0 0);
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Main container */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -75,17 +85,24 @@ body {
   height: 100vh;
 }
 
-/* SVG positioning */
+/* =========================
+   SVG
+========================= */
+
 .svg-container {
   position: absolute;
 }
 
-/* Card container */
+/* =========================
+   CARD STRUCTURE
+========================= */
+
 .card-container {
   padding: 2px;
   border-radius: 24px;
   position: relative;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       -30deg,
       var(--gradient-color),
       transparent,
@@ -98,12 +115,10 @@ body {
     );
 }
 
-/* Inner container */
 .inner-container {
   position: relative;
 }
 
-/* Border layers */
 .border-outer {
   border: 2px solid rgba(221, 132, 72, 0.5);
   border-radius: 24px;
@@ -121,47 +136,39 @@ body {
   filter: url(#turbulent-displace);
 }
 
-/* Glow effects */
+/* =========================
+   GLOW EFFECTS
+========================= */
+
+.glow-layer-1,
+.glow-layer-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
 .glow-layer-1 {
   border: 2px solid rgba(221, 132, 72, 0.6);
-  border-radius: 24px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   filter: blur(1px);
 }
 
 .glow-layer-2 {
   border: 2px solid var(--electric-light-color);
-  border-radius: 24px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   filter: blur(4px);
 }
 
-/* Overlay effects */
-.overlay-1 {
+/* =========================
+   OVERLAYS
+========================= */
+
+.overlay-1,
+.overlay-2 {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   border-radius: 24px;
-  opacity: 1;
-  mix-blend-mode: overlay;
   transform: scale(1.1);
   filter: blur(16px);
+  mix-blend-mode: overlay;
   background: linear-gradient(
     -30deg,
     white,
@@ -169,39 +176,23 @@ body {
     transparent 70%,
     white
   );
+}
+
+.overlay-1 {
+  opacity: 1;
 }
 
 .overlay-2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 24px;
   opacity: 0.5;
-  mix-blend-mode: overlay;
-  transform: scale(1.1);
-  filter: blur(16px);
-  background: linear-gradient(
-    -30deg,
-    white,
-    transparent 30%,
-    transparent 70%,
-    white
-  );
 }
 
-/* Background glow */
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
 .background-glow {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   border-radius: 24px;
   filter: blur(32px);
   transform: scale(1.1);
@@ -215,20 +206,17 @@ body {
   );
 }
 
-/* Content container */
+/* =========================
+   CONTENT
+========================= */
+
 .content-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   display: flex;
   flex-direction: column;
 }
 
-/* Content sections */
 .content-top {
   display: flex;
   flex-direction: column;
@@ -244,28 +232,31 @@ body {
   padding-top: 16px;
 }
 
-/* Scrollbar glass component */
+/* =========================
+   SCROLLBAR GLASS
+========================= */
+
 .scrollbar-glass {
-  background: radial-gradient(
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  background:
+    radial-gradient(
       47.2% 50% at 50.39% 88.37%,
       rgba(255, 255, 255, 0.12) 0%,
       rgba(255, 255, 255, 0) 100%
     ),
     rgba(255, 255, 255, 0.04);
-  position: relative;
   transition: background 0.3s ease;
-  border-radius: 14px;
-  width: fit-content;
-  height: fit-content;
-  padding: 8px 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .scrollbar-glass:hover {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       47.2% 50% at 50.39% 88.37%,
       rgba(255, 255, 255, 0.12) 0%,
       rgba(255, 255, 255, 0) 100%
@@ -276,11 +267,9 @@ body {
 .scrollbar-glass::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   padding: 1px;
+  border-radius: inherit;
   background: linear-gradient(
     150deg,
     rgba(255, 255, 255, 0.48) 16.73%,
@@ -288,14 +277,16 @@ body {
     rgba(255, 255, 255, 0.08) 68.2%,
     rgba(255, 255, 255, 0.6) 81.89%
   );
-  border-radius: inherit;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
   -webkit-mask-composite: xor;
   pointer-events: none;
 }
 
-/* Typography */
+/* =========================
+   TEXT
+========================= */
+
 .title {
   font-size: 36px;
   font-weight: 500;
@@ -306,7 +297,10 @@ body {
   opacity: 0.5;
 }
 
-/* Divider */
+/* =========================
+   DIVIDER
+========================= */
+
 .divider {
   margin-top: auto;
   border: none;
