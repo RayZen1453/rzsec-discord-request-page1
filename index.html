@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <div class="top-marquee">
+  <div class="marquee-text">
+    Info: This Website is Secured by Cloudflared, your Logs will be saved for Security!
+  </div>
+</div>
+
+<style>
+.top-marquee {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* gerekirse değiştir */
+  background-color: black;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: red;
+  font-weight: bold;
+  padding-left: 100%;
+  animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>RZ-SEC | Discord</title><main class="main-container">
