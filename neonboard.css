@@ -275,20 +275,14 @@ body {
 .description {
   opacity: 0.5;
 }
-@media (max-width: 768px) {
+
+  @media (hover: none) and (pointer: coarse) {
   .main-card {
     filter: none !important;
   }
 
-  feOffset animate,
-  feTurbulence {
+  svg {
     display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .svg-container {
-    display: none;
   }
 }
 /* Divider */
