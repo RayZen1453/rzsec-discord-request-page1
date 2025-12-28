@@ -264,17 +264,28 @@ body {
   opacity: 0.5;
 }
 @media (max-width: 768px) {
+  /* Tüm animasyonları kapat */
   
 {
     animation: none !important;
-    transition: none !important;
-    text-shadow: none !important;
-    box-shadow: none !important; },
+    transition: none !important;},
 
+  /* Sadece hareket eden overlay ve elektrik animasyonlarını kapat /
+  .glow-layer-1,
+  .glow-layer-2,
+  .overlay-1,
+  .overlay-2,
+  .background-glow {
+      animation: none !important;
+      transition: none !important;
+      filter: none !important; / Elektrik hareketini oluşturan filtreleri kapat /
+  }
+
+  / Main card filter (turbulent displacement) kapat */
   .main-card {
       filter: none !important;
   }
-} 
+}
 
 /* Divider */
 .divider {
