@@ -56,21 +56,6 @@ body {
     );
 }
 
-    .board {
-  position: relative; 
-}
-      .board-logo {
-  position: absolute; 
-  top: 50%;          
-  left: 50%;          
-  transform: translate(-50%, -50%); 
-  z-index: 10;        
-  width: 150px;       
-  height: auto;
-
-}
-
-
 /* Inner container */
 .inner-container {
   position: relative;
@@ -165,8 +150,20 @@ body {
     white
   );
 }
+  .board {
+  position: relative; 
+}
 
-/* Background glow */
+.board-logo {
+  position: absolute; 
+  top: 50%;          
+  left: 50%;          
+  transform: translate(-50%, -50%); 
+  z-index: 10;        
+  width: 150px;       
+  height: auto;
+}
+
 .background-glow {
   position: absolute;
   width: 100%;
@@ -277,29 +274,6 @@ body {
 
 .description {
   opacity: 0.5;
-}
-@media (max-width: 768px) {
-  /* Tüm animasyonları kapat */
-  
-{
-    animation: none !important;
-    transition: none !important;},
-
-  /* Sadece hareket eden overlay ve elektrik animasyonlarını kapat /
-  .glow-layer-1,
-  .glow-layer-2,
-  .overlay-1,
-  .overlay-2,
-  .background-glow {
-      animation: none !important;
-      transition: none !important;
-      filter: none !important; / Elektrik hareketini oluşturan filtreleri kapat /
-  }
-
-  / Main card filter (turbulent displacement) kapat */
-  .main-card {
-      filter: none !important;
-  }
 }
 
 /* Divider */
