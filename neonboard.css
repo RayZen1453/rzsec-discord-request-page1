@@ -9,21 +9,17 @@
   );
   --color-neutral-900: oklch(0.185 0 0);
 }
+
 @media (max-width: 768px) {
+  .main-card {
+    filter: none !important; /* SVG filtresini iptal eder /
+  }
+
+  / Tüm animasyonları kapat */
   
 {
   animation: none !important;
-  transition: none !important;
-  filter: none !important;
-  text-shadow: none !important;
-  box-shadow: none !important;},
-
-  /* Eğer board veya logo için özel animasyon varsa kapat */
-  .main-card, .board-logo, .glow-layer-1, .glow-layer-2, 
-  .overlay-1, .overlay-2, .background-glow {
-    animation: none !important;
-    filter: none !important;
-  }
+  transition: none !important;},
 }
 * {
   margin: 0;
