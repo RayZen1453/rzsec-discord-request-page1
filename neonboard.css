@@ -263,7 +263,11 @@ body {
 .description {
   opacity: 0.5;
 }
-
+@media (max-width: 768px) {
+  body {
+    background: black;
+  }
+}
 /* Divider */
 .divider {
   margin-top: auto;
