@@ -10,6 +10,16 @@
   --color-neutral-900: oklch(0.185 0 0);
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .electric-svg {
+    display: none !important;
+  }
+
+  .main-card {
+    filter: none !important;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
