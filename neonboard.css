@@ -26,6 +26,34 @@
   box-sizing: border-box;
 }
 
+.top-marquee {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;   /* arka plan siyah /
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: red;                / yazı kırmızı /
+  font-weight: bold;
+  padding-left: 100%;        / başta ekranın dışında başlasın */
+  animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 body {
   font-family: system-ui, -apple-system, sans-serif;
   background-color: oklch(0.145 0 0);
