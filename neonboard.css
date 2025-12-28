@@ -264,13 +264,17 @@ body {
   opacity: 0.5;
 }
 @media (max-width: 768px) {
-  * {
-      animation: none !important;
-      transition: none !important;
-      text-shadow: none !important;
-      bxx-shadow: none !important;
+  
+{
+    animation: none !important;
+    transition: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important; },
+
+  .main-card {
+      filter: none !important;
   }
-}  
+} 
 
 /* Divider */
 .divider {
