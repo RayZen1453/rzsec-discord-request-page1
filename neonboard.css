@@ -26,26 +26,6 @@
   box-sizing: border-box;
 }
 
-.top-marquee {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30px; / istersen yükseklik ayarla /
-  background-color: black;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.marquee-text {
-  display: inline-block;
-  white-space: nowrap;
-  color: red;
-  font-weight: bold;
-  padding-left: 100%; / başta ekran dışında başlasın */
-  animation: scroll-left 12s linear infinite;
-}
-
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
