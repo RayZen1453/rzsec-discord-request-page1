@@ -264,10 +264,14 @@ body {
   opacity: 0.5;
 }
 @media (max-width: 768px) {
-  body {
-    background: black;
+  * {
+      animation: none !important;
+      transition: none !important;
+      text-shadow: none !important;
+      bxx-shadow: none !important;
   }
-}
+}  
+
 /* Divider */
 .divider {
   margin-top: auto;
