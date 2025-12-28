@@ -276,15 +276,7 @@ body {
   opacity: 0.5;
 }
 
-  @media (hover: none) and (pointer: coarse) {
-  .main-card {
-    filter: none !important;
-  }
 
-  svg {
-    display: none !important;
-  }
-}
 /* Divider */
 .divider {
   margin-top: auto;
