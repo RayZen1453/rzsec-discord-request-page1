@@ -10,17 +10,7 @@
   --color-neutral-900: oklch(0.185 0 0);
 }
 
-@media (max-width: 768px) {
-  .main-card {
-    filter: none !important; /* SVG filtresini iptal eder /
-  }
 
-  / Tüm animasyonları kapat */
-  
-{
-  animation: none !important;
-  transition: none !important;},
-}
 * {
   margin: 0;
   padding: 0;
